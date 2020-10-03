@@ -17,7 +17,7 @@ def func(a):
             while j >= g and a[j-g] >temp:#步长之间相减之后获取一个差值进行比较，符合条件之后
                 a[i] = a[j-g]
                 j -= g
-            a[j] = temp#进行交换
+            a[j] = temp#进行交换数据
         g = int(g/2)#步长减半
     print(a)
 
