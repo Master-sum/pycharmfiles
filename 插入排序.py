@@ -14,7 +14,7 @@ def func(a):
         while(index>=0 and a[index]>tp): #当index是正数且前一个数大于后一个数时进行插入操作
             a[index+1] = a[index]#将前一个数往后移动
             index = index-1#再将该数和前面的比较
-        a[index+1] = tp#
+        a[index+1] = tp#最后将值插入进去
     print(a)
 a = [5,2,6,7,1,3]
 func(a)
