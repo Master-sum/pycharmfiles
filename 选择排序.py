@@ -20,7 +20,7 @@ def func(a):
     a.remove(min)#每次找到最小的就把min从a中删除
     if len(a)==1:#最后一个直接是最大的
         print(a[0])
-    if len(a)>=2:#存在两个数的时候可以进行比较1
+    if len(a)>=2:#存在两个数的时候可以进行比较
         func(a)
 
 def func1(a):
