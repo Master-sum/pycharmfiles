@@ -17,6 +17,6 @@ def func(a):
     print(mid)
     l = [i for i in a[1:] if i<mid] #获得小于mid的数
     r = [i for i in a[1:] if i>mid] #获得大于mid的数
-    return func(l)+[mid]+func(r) #进行递归调用
+    return func(l)+[mid]+func(r) #进行递归调用函数
 a = [12,34,54,2,3,7,1]
 print(func(a))
