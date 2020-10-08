@@ -8,9 +8,9 @@
 class Singleton(object):
     def __new__(cls, *args, **kwargs):#新建一个对象
         if not hasattr(cls,'_instance'):#判断cls对象中是否含有'_instance'属性
-            ob = super(Singleton,cls)
-            cls._instance = ob.__new__(cls, *args, **kwargs)
-        return cls._instance
+            ob = super(Singleton,cls)#继承自己
+            cls._instance = ob.__new__(cls, *args, **kwargs)#创建一个对象含有'_instance'
+        return cls._instance#返回函数
 
 class Myclass(Singleton):
     def __init__(self):
