@@ -28,7 +28,37 @@ class Sun(object):
         else:
             #返回上一个对象的引用
             return cls.__instance
-a = Sun()
-print(id(a))
-b = Sun()
-print(id(b))
+# a = Sun()
+# print(id(a))
+# b = Sun()
+# print(id(b))
+
+#2020年10月13
+def singleton(cls):
+    _instance = {}
+    print("第一次{}".format(_instance))
+    def _func(*args,**kwargs):
+        if cls not in _instance:
+            _instance[cls] = cls()
+            print("第er次{}".format(_instance))
+        return _instance[cls]
+    return _func
+
+@singleton
+class A(object):
+    a = 1
+    print(1)
+    def __init__(self, x=0):
+        self.x = x
+        print('这是A的类的初始化方法')
+@singleton
+class B(object):
+    a = 1
+    print(1)
+    def __init__(self, x=0):
+        self.x = x
+        print('这是A的类的初始化方法')
+
+a1 = A(1)
+b1 = B(1)
+print(id(a1),id(b1))
