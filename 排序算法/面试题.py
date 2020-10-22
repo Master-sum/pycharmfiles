@@ -336,4 +336,11 @@ str去重，s = 'xbdxbhwbxkkw' 按大小顺序排列
 # s.lstrip()#左边
 # print(s)
 
-
+import redis
+client = redis.StrictRedis()
+for i in range(1000):
+    client.pfadd("code","user%d"%i)
+    total = client.pfcount("code")
+    if total != i+1:
+        print(total,i+1)
+        break
