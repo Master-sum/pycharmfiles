@@ -75,7 +75,7 @@ def func_dict(d,key =None):
             yield val
             dict_s.add(val)
 """
-#第四题找出集合中元素最多及个数
+#第四题找出集合中元素最多及个数1
 """
 from collections import Counter
 s = "cdscjsndsiniaskalsxsnia"
