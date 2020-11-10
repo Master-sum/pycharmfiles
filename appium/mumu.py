@@ -16,6 +16,7 @@ disired_caps = {
   "appActivity": "com.taobao.tao.TBMainActivity",
   "noReset":True
 }
+#参数化
 driver = webdriver.Remote("http://localhost:4723/wd/hub",disired_caps)
 driver.implicitly_wait(5)
 time.sleep(5)
