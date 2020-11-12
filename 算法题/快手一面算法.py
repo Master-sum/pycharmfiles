@@ -46,7 +46,7 @@ for i in range(len(nums)):
                     if l not in st:
                         st.append(l)
 
-#换行输出ww
+#换行输出
 x = np.array(st)
 print(x)
 '''
