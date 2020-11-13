@@ -14,3 +14,21 @@
 输出：7 -> 0 -> 8
 原因：342 + 465 = 807
 '''
+import re
+str1 = input("输入：")
+l = str1.split('+')
+sum = 0
+for i in l:
+    #正则匹配数字
+    f = re.findall(r'\d+',i)
+    #转换字符串
+    num_str = ''.join(f)
+    #将字符串逆序转整型
+    num = int(num_str[::-1])
+    #进行累加
+    sum += num
+#int转换str
+a = str(sum)
+#使用'->'进行分割
+data = '->'.join(a[::-1])
+print("输出：%s"%data)
