@@ -23,9 +23,14 @@ if __name__ == "__main__":
     # 执行次数
     for i in range(10):
         # 调用目标函数
-        po.apply_async(worker,(i,))
+        # po.apply_async(worker,(i,))
+        po.apply(worker,(i,))
 
     print("--start_-----")
     po.close()
     po.join()
     print("---end--")
+
+'''
+apply和pply_async的区别是
+'''
